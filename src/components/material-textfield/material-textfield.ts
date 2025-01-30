@@ -32,6 +32,8 @@ const fire = <T>(
 export class NintexSampleTextfield extends LitElement {
   static styles = styles;  //Add custom CSS. See https://help.nintex.com/en-US/formplugins/Reference/Style.htm
 
+  @property({ type: String })
+  value: string = '';
   @property()
   label!: string;
   @property()
