@@ -1960,7 +1960,7 @@ let NintexSampleTextfield = _decorate([e$2('form-plugin-textfield')], function (
       })],
       key: "value",
       value() {
-        return '';
+        return 'test';
       }
     }, {
       kind: "field",
