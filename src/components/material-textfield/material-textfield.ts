@@ -33,7 +33,7 @@ export class NintexSampleTextfield extends LitElement {
   static styles = styles;  //Add custom CSS. See https://help.nintex.com/en-US/formplugins/Reference/Style.htm
 
   @property({ type: String })
-  value: string = 'test';
+  value: string = ' ';
   @property()
   label!: string;
   @property()
@@ -60,7 +60,7 @@ export class NintexSampleTextfield extends LitElement {
           title: 'Value',
           // this is to mark the field as value field. it should only be defined once in the list of properties
           isValueField: true,
-          defaultValue: 'This is a text field default value',
+          defaultValue: 'This is a text field default value1',
         },
       },
       standardProperties: {

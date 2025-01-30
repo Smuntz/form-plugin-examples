@@ -1960,7 +1960,7 @@ let NintexSampleTextfield = _decorate([e$2('form-plugin-textfield')], function (
       })],
       key: "value",
       value() {
-        return 'test';
+        return ' ';
       }
     }, {
       kind: "field",
@@ -2018,7 +2018,7 @@ let NintexSampleTextfield = _decorate([e$2('form-plugin-textfield')], function (
               title: 'Value',
               // this is to mark the field as value field. it should only be defined once in the list of properties
               isValueField: true,
-              defaultValue: 'This is a text field default value'
+              defaultValue: 'This is a text field default value1'
             }
           },
           standardProperties: {
