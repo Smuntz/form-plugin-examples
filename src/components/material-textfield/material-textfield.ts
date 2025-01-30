@@ -45,8 +45,12 @@ export class NintexSampleTextfield extends LitElement {
 
   connectedCallback() {
     super.connectedCallback();
+    if (!this.value || this.value === ' ') {
+      this.value = 'This is a text field default value1';
+    }
     fire<any>(this, { detail: this.value });
   }
+  
 
 
   static getMetaConfig(): Promise<PluginContract> | PluginContract {

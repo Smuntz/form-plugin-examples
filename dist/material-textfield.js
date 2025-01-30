@@ -2000,6 +2000,9 @@ let NintexSampleTextfield = _decorate([e$2('form-plugin-textfield')], function (
 
       function connectedCallback() {
         _get(_getPrototypeOf(NintexSampleTextfield.prototype), "connectedCallback", this).call(this);
+        if (!this.value || this.value === ' ') {
+          this.value = 'This is a text field default value1';
+        }
         fire(this, {
           detail: this.value
         });
