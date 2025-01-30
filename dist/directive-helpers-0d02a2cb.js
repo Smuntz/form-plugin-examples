@@ -1,4 +1,4 @@
-import './query-assigned-elements-f8b1b870.js';
+import './query-assigned-elements-b2b5ede8.js';
 
 /**
  * @license

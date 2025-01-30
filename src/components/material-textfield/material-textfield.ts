@@ -43,6 +43,12 @@ export class NintexSampleTextfield extends LitElement {
   @property({ type: Boolean })
   readOnly: boolean = false;   //Add a read-only mode. See https://help.nintex.com/en-US/formplugins/Reference/ReadOnly.htm
 
+  connectedCallback() {
+    super.connectedCallback();
+    fire<any>(this, { detail: this.value });
+  }
+
+
   static getMetaConfig(): Promise<PluginContract> | PluginContract {
     // plugin contract information
     return {

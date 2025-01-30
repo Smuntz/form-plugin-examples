@@ -1,7 +1,7 @@
-import { e as e$1, x, i as i$1, a as e$2, T, A, _ as _decorate, s as s$1 } from './query-assigned-elements-f8b1b870.js';
-import { o, _ as __extends, b as __assign, M as MDCFoundation, c as __decorate, i, B as BaseElement, d as o$1, a as __values, t as t$1, F as FormElement, l as l$1, f as addHasRemoveClass } from './if-defined-08a62fa2.js';
+import { e as e$1, x, i as i$1, a as e$2, T, A, _ as _decorate, s as s$1, b as _get, c as _getPrototypeOf } from './query-assigned-elements-b2b5ede8.js';
+import { o, _ as __extends, b as __assign, M as MDCFoundation, c as __decorate, i, B as BaseElement, d as o$1, a as __values, t as t$1, F as FormElement, l as l$1, f as addHasRemoveClass } from './if-defined-974c5eda.js';
 import { e as e$3, i as i$2, t } from './directive-2bb7789e.js';
-import { e as e$4, s } from './directive-helpers-3a87c54b.js';
+import { e as e$4, s } from './directive-helpers-0d02a2cb.js';
 
 /**
  * @license
@@ -1992,14 +1992,23 @@ let NintexSampleTextfield = _decorate([e$2('form-plugin-textfield')], function (
       }
     }, {
       kind: "method",
-      static: true,
-      key: "getMetaConfig",
+      key: "connectedCallback",
       value:
       //Add custom CSS. See https://help.nintex.com/en-US/formplugins/Reference/Style.htm
 
       //Add a read-only mode. See https://help.nintex.com/en-US/formplugins/Reference/ReadOnly.htm
 
-      function getMetaConfig() {
+      function connectedCallback() {
+        _get(_getPrototypeOf(NintexSampleTextfield.prototype), "connectedCallback", this).call(this);
+        fire(this, {
+          detail: this.value
+        });
+      }
+    }, {
+      kind: "method",
+      static: true,
+      key: "getMetaConfig",
+      value: function getMetaConfig() {
         // plugin contract information
         return {
           controlName: 'Material Text field',
